@@ -1,0 +1,26 @@
+<!-- 文档类型声明标签，告诉浏览器该文档的html版本 -->
+<!DOCTYPE html>
+<!-- lang表示当前文档显示的语言，可以取值为en,zh-CN，fr(法语)，它会提示浏览器是否将该文档的语言翻译成该种语言 -->
+<html lang="zh-CN">
+  <head>
+    <!-- meta全名为metadata,表示元数据，不会显示在客户端，但会被浏览器，搜索引擎，web服务调用-->
+    <!-- charset表示文档存储时的编码方式，GB2312表示简体中文，BIG5表示繁体中文，GBK为国标，包括简体中文和繁体中文，UTF-8为万国码，包含了所有国家需要用到的字符 -->
+    <meta charset="UTF-8" />
+    <!-- description用于定义web页面描述 -->
+    <meta name="description" content="Free Web tutorials on HTML and CSS" />
+    <!-- viewport用于移动端显示的优化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 每隔1秒刷新页面，http-equiv会将content内容关联到 HTTP 头部 -->
+    <meta http-equiv="refresh" content="1" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>你好成都</div>
+    <script>
+      const div = document.querySelector("div");
+      div.innerHTML = new Date();
+    </script>
+  </body>
+</html>
