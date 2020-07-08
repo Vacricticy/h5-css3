@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单由三部分组成：表单域，表单控件（表单元素），提示信息 -->
+    <!-- form标签即为表单域 -->
+    <form action="" method="" name="form1">
+        <!-- 三大类表单元素：输入表单元素input,下拉表单元素select,文本域元素textarea -->
+
+        <!-- input表单元素 text,password,radio,checkbox-->
+        <!-- name属性表示input元素的名称，
+            value表示input元素的值，
+            checkded属性用于单选按钮和复选框，表示默认选中的选项，
+            maxlength表示输入字符的最大长度
+         -->
+        用户名：<input type="text" name="username" maxlength="8"><br>
+        密码：<input type="password" name="password"><br>
+        <!-- 单选按钮需要使用相同的name值 -->
+        性别：男 <input type="radio" value="男" name="gender" > 女 <input type="radio" value="女" name="gender" checked="checked"><br>
+        <!-- 复选框也需要使用相同的name值 -->
+        爱好：音乐<input type="checkbox" name="hobby" checked>摄影<input type="checkbox" name="hobby" checked> 游泳<input type="checkbox" name="hobby">
+
+    </form>
+</body>
+</html>
