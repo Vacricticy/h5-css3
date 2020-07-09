@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1.后代选择器----会选择所有的后代，包括儿子，孙子 */
+      .ulBox li {
+        color: orange;
+      }
+
+      /* 2.子选择器----只选择儿子，不会选择孙子 */
+      ol li > a {
+        color: green;
+      }
+
+      /* 3.并集选择器用于选择多组标签 */
+      .bin1,
+      .bin2,
+      .bin3 a {
+        color: blue;
+      }
+
+      /* 4.伪类选择器 */
+      /* 设置未访问的链接的样式 */
+      .wei a:link {
+        color: green;
+        text-decoration: none;
+      }
+      /* 设置访问过的链接的样式 */
+      .wei a:visited {
+        color: yellow;
+      }
+      /* 设置鼠标经过链接时的样式 */
+      .wei a:hover {
+        color: blue;
+      }
+      /* 设置鼠标按下但未松开时的样式 */
+      .wei a:active {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器 -->
+    <ul class="ulBox">
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>
+        <div><li>222</li></div>
+      </li>
+    </ul>
+
+    <ol>
+      <li><a href="#">111</a></li>
+      <li><a href="#">111</a></li>
+      <li><a href="#">111</a></li>
+      <li><a href="#">111</a></li>
+      <li>
+        <div><a href="#">111</a></div>
+      </li>
+    </ol>
+
+    <div class="bin1">刘小康</div>
+    <div class="bin2">刘小康</div>
+    <div class="bin3"><a href="#">刘小康</a></div>
+    <br />
+
+    <div class="wei">
+      <a href="#">刘小康</a>
+      <a href="#">刘小康2</a>
+    </div>
+  </body>
+</html>
