@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        width: 200px;
+        height: 50px;
+        background-color: yellow;
+        display: block;
+        text-decoration: none;
+      }
+      div {
+        display: inline;
+        /* 转换为行内元素后设置宽高是无效的 */
+        /* width: 200px; */
+        /* height: 50px; */
+        background-color: orange;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- html元素分为块元素和行内元素两大类 -->
+
+    <!-- 1.块元素：
+        高度，宽度，内外边距都可设置，
+        其宽度默认为父级元素的100%
+        特殊：文字类的元素：p,h1,h2这种元素内部不能放块级元素
+     -->
+
+    <!-- 2.行内元素：
+        ❤ 宽高直接设置是无效的，
+        默认宽度为本身内容的宽度，
+        只能容纳文本和其他行内元素，
+       特殊： a链接里面不能再放a链接，但可以放块级元素（此时需要转化为块级模式才安全）        
+    -->
+
+    <!-- 3.行内块元素：img,input,td标签
+        一行可以显示多个，
+        宽高可设置
+    -->
+
+    <!-- 元素显示模式的转换
+        √转换为块级元素：display:block 
+        转换为行内元素：display:inline
+        √转换为行内块元素：display:inline-block
+    -->
+
+    <a href="#">刘亚仁</a>
+    <div>刘亚仁2</div>
+    <div>刘亚仁3</div>
+    <span>刘亚仁4</span>
+    <span>刘亚仁5</span>
+  </body>
+</html>

@@ -5,49 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        /* 文本属性包括：文本颜色，对齐文本，装饰文本，文本缩进，行间距 */
+      /* 文本属性包括：文本颜色，对齐文本，装饰文本，文本缩进，行间距 */
 
       div {
-          /* 1.实际开发中一般使用的是十六进制,通过吸管工具吸取想要的颜色 */
+        /* 1.实际开发中一般使用的是十六进制,通过吸管工具吸取想要的颜色 */
         /* color:#2781db; */
         /* color: blue; */
         /* color:rgb(255,0,255) */
         color: rgb(90%, 10%, 90%);
       }
-      h1{
-          /* 2.对齐文本
+      h1 {
+        /* 2.对齐文本
           text-align用于设置标签中的文本水平对齐的方式
           若该标签中包含一个图片元素，则text-align也可以使图片居中对齐 */
 
-          /* text-align: left;默认值为left */ 
-          text-align: center;
+        /* text-align: left;默认值为left */
+        text-align: center;
       }
-      h2{
-          /* 3.装饰文本
+      h2 {
+        /* 3.装饰文本
           text-decoration常见应用：添加下划线，为a标签删除下划线 */
-          text-decoration: underline;
-          /* text-decoration: line-through; */
+        text-decoration: underline;
+        /* text-decoration: line-through; */
       }
-      a{    
-          text-decoration: none;
+      a {
+        text-decoration: none;
       }
 
-      p{
-          width: 400px;
-          font-size: 18px;
-          /* 4.文本缩进 */
-          /* text-indent: 20px; */
-          text-indent:2em;
-          /* em是一个相对单位，1em表示当前元素一个文字的大小 */
-          /* 如果当前元素没有设置大小，则会参照父元素一个文字的大小 */
+      p {
+        width: 400px;
+        font-size: 18px;
+        /* 4.文本缩进 */
+        /* 可用于所有的文本，不仅限于P标签 */
+        /* text-indent: 20px; */
+        text-indent: 2em;
+        /* em是一个相对单位，1em表示当前元素一个文字的大小 */
+        /* 如果当前元素没有设置大小，则会参照父元素一个文字的大小 */
 
+        /* 5.行间距 */
+        /* ♥ 行高由三部分组成：文本的高度(即font-size)+上下间距 */
+        /* line-height: 2em; */
+        line-height: 28px;
 
-          /* 5.行间距 */
-          /* ♥ 行高由三部分组成：文本的高度(即font-size)+上下间距 */
-          /* line-height: 2em; */
-          line-height: 28px;
-
-          /* 测量行高的工具：FastStone Capture */
+        /* 测量行高的工具：FastStone Capture */
       }
     </style>
   </head>
@@ -56,7 +56,8 @@
     <h1>刘小康</h1>
     <h2>刘小康</h2>
     <a href="#">刘小康</a>
-    <p>刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康</p>
-    
-</body>
+    <p>
+      刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康刘小康
+    </p>
+  </body>
 </html>

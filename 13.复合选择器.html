@@ -23,6 +23,7 @@
       }
 
       /* 4.伪类选择器 */
+      /* 4.1链接伪类选择器----注意必须按照LVHA的顺序进行声明 */
       /* 设置未访问的链接的样式 */
       .wei a:link {
         color: green;
@@ -39,6 +40,13 @@
       /* 设置鼠标按下但未松开时的样式 */
       .wei a:active {
         color: brown;
+      }
+
+      /* 4.2focus伪类选择器 */
+      /* 用于选取获取焦点的表单元素       */
+      input:focus {
+        background-color: blue;
+        color: white;
       }
     </style>
   </head>
@@ -73,5 +81,8 @@
       <a href="#">刘小康</a>
       <a href="#">刘小康2</a>
     </div>
+
+    <input type="text" />
+    <input type="text" />
   </body>
 </html>
