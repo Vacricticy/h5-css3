@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 盒子模型的组成分为4部分：内容，边框，内边距，外边距 -->
+
+    <!-- 1.边框
+        边框的组成分为3部分：宽度，样式，颜色
+        边框会影响盒子的大小。在测量盒子宽度的时候需要注意是否计算了边框。
+    -->
+    <style>
+      .box1 {
+        width: 100px;
+        height: 50px;
+        /* border-width: 2px; */
+        /* border-style: solid; */
+        /* border-style: dashed; */
+        /* border-style: dotted; */
+        /* border-color: orange; */
+
+        /* 复合写法没有顺序 */
+        border-bottom: 2px solid orange;
+
+        line-height: 50px;
+        text-align: center;
+      }
+      table {
+        width: 200px;
+        height: 200px;
+      }
+      table,
+      td,
+      th {
+        border: 1px orange solid;
+        /* ❤ 该属性用于合并相邻的单元格 */
+        border-collapse: collapse;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">刘亚仁</div>
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>刘亚仁</th>
+          <th>刘亚仁</th>
+          <th>刘亚仁</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+        </tr>
+        <tr>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+        </tr>
+        <tr>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+          <td>刘亚仁</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

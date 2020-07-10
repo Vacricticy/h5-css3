@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        border-radius: 5px;
+      }
+      .box1:hover {
+        margin: 98px auto;
+        /* 各参数分为为：水平阴影的位置，垂直阴影的位置，模糊距离(即虚实的程度)，阴影尺寸，阴影颜色(一般采用rgba的形式) */
+        box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <img src="liuyaren.png" alt="" />
+    </div>
+  </body>
+</html>

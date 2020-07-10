@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS三大特性:层叠性，继承性，优先级 -->
+
+    <!-- 1.层叠性：样式冲突则采用就近原则 -->
+
+    <!-- 2.继承性：只能继承父元素的文字相关的属性，比如text-,font-,line-,color属性 -->
+    <!-- 继承性特例：行高的继承
+        父元素设置行高为小数时，表示子元素字体的行高为原字体大小的相应倍数
+    -->
+
+    <!-- 3.优先级 -->
+    <!-- 选择器权重：
+        !important  权重为无穷大
+        行内样式    1000
+        id选择器    100
+        类选择器，伪类选择器    10
+        元素选择器  1
+        继承，通配符选择器  0
+
+        注意：继承的权重为0，即若子元素自己设置了样式，尽管父元素设置了!important，其继承过来的样式所占的权重也为0。
+    ❤ 这就可以解释为什么在body设置了color属性后，a标签的颜色依然不会改变，因为系统给a标签设置了a{color:blue}的属性，其权重大于继承过来的值
+
+        权重叠加
+    -->
+    <style>
+      body {
+        font: 20px/1.5 "Microsoft YaHei";
+        color: orange;
+      }
+      div {
+        /* 实际行高为30px*1.5=45px */
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 40px;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>刘亚仁</div>
+    <h3>刘亚仁</h3>
+
+    <a href="#">刘亚仁</a>
+  </body>
+</html>

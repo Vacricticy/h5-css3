@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 圆角边框的原理：圆与边框的交集形成圆角效果 -->
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        /* 注意：使用百分比时相对的是宽度的百分比 */
+        border-radius: 50%;
+      }
+      .box2 {
+        width: 500px;
+        height: 200px;
+        background-color: orange;
+        /* border-radius: 50px; */
+        /* 圆角矩形的实现：将border-radius设置为高度的一半 */
+        border-radius: 100px;
+      }
+      .box3 {
+        width: 500px;
+        height: 200px;
+        background-color: orange;
+        border-radius: 0 100px 100px 0;
+      }
+    </style>
+  </head>
+  <body>
+    圆形：
+    <div class="box1"></div>
+    圆角矩形：
+    <div class="box2"></div>
+    不同的圆角边框：
+    <div class="box3"></div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1.使块级元素居中对齐：利用外边距实现
+        前提：该块级元素必须设置了宽度。
+        然后通过设置❤左右外边距为auto来实现
+
+
+        2.使行内元素/行内块元素居中对齐：
+        为父元素添加text-align:center属性
+
+        3.外边距合并的情况：
+        相邻的块元素垂直外边距的合并：其最终的垂直外边距由最大的垂直外边距决定
+        嵌套的块元素垂直外边距的塌陷：父元素和子元素都有外边距，此时父元素的外边距由最大的值决定
+
+        4.清除内外边距
+
+        5.行内元素尽量只设置左右的内外边距，因为设置了上下边距也不会有效果。若非要设置，则转换为块级元素或行内块元素
+
+        6.补充知识：去除列表标签的原始样式
+        list-style:none;
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      .box2 {
+        width: 20px;
+        height: 20px;
+        background-color: skyblue;
+        margin: 0 auto;
+      }
+      .box3 {
+        text-align: center;
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* 外边距合并 */
+        margin-bottom: 50px;
+      }
+      .box5 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin-top: 40px;
+      }
+
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        /* 外边距塌陷 */
+        margin-top: 20px;
+        /* 解决外边距塌陷的方案： */
+        /* 1.为父元素设置边框 */
+        /* border: 1px solid transparent; */
+        /* 2.为父元素设置内边距 */
+        /* padding: 1px; */
+        /* 3.为父元素添加overflow: hidden; */
+        overflow: hidden;
+      }
+      .son {
+        width: 20px;
+        height: 20px;
+        background-color: skyblue;
+        margin-top: 40px;
+      }
+
+      ul,
+      ol {
+        width: 500px;
+        margin: auto;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+    <div class="box1 box3">
+      <img src="images/icon.png" alt="" />
+    </div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+    <div class="father">
+      <div class="son"></div>
+    </div>
+
+    <ul>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+    </ul>
+
+    <ol>
+      <li>22</li>
+      <li>22</li>
+      <li>22</li>
+      <li>22</li>
+      <li>22</li>
+    </ol>
+  </body>
+</html>

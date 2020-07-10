@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 背景属性包括 背景颜色，背景图片，背景平铺，背景图片位置，背景图像固定  */
+
+      .box1 {
+        width: 600px;
+        height: 600px;
+
+        /* 1.background-color: transparent;默认情况背景颜色为透明状态 */
+        /* background-color: orange; */
+        /* 插曲：背景颜色半透明的设置----rgba中的a代表alpha透明度，取值为0表示透明，为1表示不透明 */
+        background-color: rgba(0, 0, 0, 0.6);
+
+        /* 2.背景图片一般用于装饰性的小图片或超大的背景图片，便于调节位置，image标签不方便调节位置  */
+        background-image: url(liuyaren.png);
+
+        /* 3.背景平铺 background-repeat:repeat,no-repeat,repeat-x,repeat-y */
+        /* 背景图片默认为repeat平铺效果，即当图片小于盒子大小时，会重复显示多张图片铺满盒子。而当图片大于盒子大小时，会只显示图片的一部分 */
+        background-repeat: no-repeat;
+        /* 沿x轴平铺 */
+        /* background-repeat: repeat-x; */
+
+        /* 4.背景图片位置：
+             background-position:x y;
+             x和y可以是方位名词，也可以是精确单位。
+
+             （1）当是方位名词时：
+             x轴取值为left|center|right，y轴取值为top|center|bottom。
+             x和y的顺序可以交换，原理是根据left,right或者top,bottom就可以知道是设置的x轴还是y轴，从而可以确定另一个参数所在的轴。
+             结合下面一条规则，这样做的好处是只需要写一个参数就可确定背景图片的位置。
+             若只写了一个参数，则另一参数默认为center
+
+             （2）当时精确单位时，不可交换顺序:
+             只写一个参数，则另一个参数为居中显示            
+
+             （3）还可以是混合单位，即一个方位，一个是单位，但此时必须保证x和y的顺序
+         */
+
+        /* background-position: right top; */
+        /* 下面三种情况是等价的 */
+        /* background-position: right center; */
+        /* background-position: center right;  */
+        /* background-position: right; */
+
+        /* background-position: 20px 100px; */
+        background-position: 20px;
+      }
+
+      h3 {
+        width: 200px;
+        height: 50px;
+        font-weight: 400;
+        line-height: 50px;
+        background-image: url(images/icon.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        text-indent: 1.7em;
+      }
+
+      body {
+        background-image: url(images/bg.jpg);
+        background-repeat: no-repeat;
+        /* 一般背景图都是设置y轴居上，x轴居中显示 */
+        /* background-position: top; */
+        background-position: center 40px;
+
+        /* 5.背景图片固定：background-attachment:flexed|scroll
+            flexed表示背景图片固定
+            scroll为默认值，表示背景图片随内容滚动
+            后期可用于制作视差滚动效果
+         */
+        background-attachment: fixed;
+        /* background-attachment: scroll; */
+
+        /* 背景属性复合写法：不要求顺序 */
+        /* 上述等价为： */
+        /* background: url(images/bg.jpg) no-repeat center 40px fixed; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+    <h3>保护环境</h3>
+  </body>
+</html>
