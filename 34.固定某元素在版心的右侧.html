@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 实现目的：‘固定’某元素在版心的右侧，并且随着屏幕的放大和缩小，其位置依然处于版心的右侧
+        分析：如果单纯的使用固定定位，即相对于可视区域的位置，此时在缩放的时候会使该元素与版心分离。
+        正确的做法是采用固定定位+margin-left的方式
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 800px;
+        height: 3000px;
+        background-color: orange;
+        margin: 0 auto;
+      }
+      .help {
+        /* 首先通过固定定位移动到可视区的中心 */
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        /* 然后通过margin-left移动版心距离的一半，使其附着在版心的右侧 */
+        margin-left: 400px;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="help"></div>
+    <div class="box"></div>
+  </body>
+</html>

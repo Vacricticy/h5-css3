@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 
+    定位=定位模式+边偏移
+
+        定位模式position共有4种：静态定位，相对定位，绝对定位，固定定位
+
+        1.静态定位static ----默认的定位方式，相当于没有设置定位，即标准流
+
+        2.相对定位relative 
+        相对自己原来的位置移动。
+        原来在标准流中的位置继续占有，不会有“脱标”的现象。
+
+        3.绝对定位absolute
+        绝对定位是相对于父元素的定位，若不存在‘祖先’元素或‘祖先’元素没有定位，则会以浏览器为基准进行定位。
+        具体来说绝对定位是以最近一级的带有定位的祖先元素为基础进行移动的。
+        注意：这里‘祖先’元素的定位可以是相对定位，绝对定位或固定定位其中的一种，但不能是静态定位。
+
+        绝对定位是脱标的，不占有原来的位置,只要设置了绝对定位，则会立马脱离标准流。
+
+        父元素的定位不能采用绝对定位的原因：会导致父元素脱离标准流。
+
+        4.固定定位fixed
+        相对于可视区域移动
+  -->
+  <style>
+    .box1 {
+      position: relative;
+      top: 10px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    .father {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+    }
+    .son {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+    .grandfather {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+    }
+
+    .box3 {
+      position: fixed;
+      top: 100px;
+      right: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      background-color: white;
+      color: orange;
+      cursor: pointer;
+      text-align: center;
+      line-height: 100px;
+    }
+    .box3:hover {
+      top: 98px;
+      box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+      border: 0;
+      background-color: orange;
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- 相对定位 -->
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+
+    <!-- 绝对定位 -->
+    <!-- <div class="grandfather">
+      <div class="father">
+        <div class="son"></div>
+        <div>hahaha</div>
+      </div>
+    </div> -->
+
+    <!-- 固定定位 -->
+    <div class="box3">入口</div>
+  </body>
+</html>
