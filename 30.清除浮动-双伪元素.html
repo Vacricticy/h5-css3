@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 给父元素添加 */
+
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: table;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      .clearfix {
+        /* 兼容IE6,IE7 */
+        *zoom: 1;
+      }
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        float: left;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        float: left;
+      }
+      .footer {
+        height: 200px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father clearfix">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
