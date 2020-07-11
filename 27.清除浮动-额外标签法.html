@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        float: left;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        float: left;
+      }
+      .footer {
+        height: 200px;
+        background-color: yellow;
+      }
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <!-- 在最后一个浮动的元素后面添加一个额外的块级元素，并添加清楚浮动的样式 -->
+
+      <!-- 缺点：需要单独加标签 -->
+
+      <!-- W3C推荐的方法，但该方法不常使用 -->
+      <div class="clear"></div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
