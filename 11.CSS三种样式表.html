@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- 3.外部样式表 -->
     <!-- rel 属性规定当前文档与被链接文档之间的关系。 -->
     <!-- type 属性规定被链接文档的 MIME 类型。最常见的 MIME 类型是 "text/css"，该类型描述样式表 -->
     <!-- MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的因特网标准。 -->
-    <link rel="stylesheet" type="text/css" href="xxx.css">
-     <!-- 1.内部样式表 -->
-    <style>
-        div{
+    <link rel="stylesheet" type="text/css" href="xxx.css" />
 
-        }
+    <!-- 额外补充：src与href的区别：
+    遇到href，页面会并行加载后续内容；而src则不同，浏览器需要加载完毕src的内容才会继续往下走 -->
+
+    <!-- 1.内部样式表 -->
+    <style>
+      div {
+      }
     </style>
-</head>
-<body>
-   <div>刘小康</div>
-   <!-- 2.行内样式表，用于简单的修改样式 -->
-   <p style="color:blue">刘小康</p>
-</body>
+  </head>
+  <body>
+    <div>刘小康</div>
+    <!-- 2.行内样式表，用于简单的修改样式 -->
+    <p style="color: blue;">刘小康</p>
+  </body>
 </html>
