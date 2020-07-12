@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* 方式一：display属性 */
+
+        /* display‘隐藏’的元素将不占用原来的位置 */
+        /* display: none; */
+
+        /* display:block除了可以转换为块元素之外，显示元素的意思 */
+        /* display: block; */
+
+        /* 方式二：visibility */
+
+        /* visibility隐藏的元素会占有原来的位置 */
+        /* visibility: hidden; */
+        visibility: visible;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .box3 {
+        /* 方式三：overflow --对溢出的部分进行处理*/
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+
+        overflow: hidden;
+
+        /* 添加滚动条 */
+        /* overflow: scroll; */
+
+        /* 当内容超出盒子时才添加滚动条 */
+        /* overflow: auto; */
+      }
+
+      .box4 {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+      }
+      .box4 img {
+        width: 100%;
+        height: 100%;
+      }
+      .box5 {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(0, 0, 0, 0.3); */
+        /* 注意这里的顺序，透明的背景色应该写在背景图片后面，否则背景色会被背景图片覆盖掉 */
+        background: url(images/play.png) no-repeat center;
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      /* 注意这里的书写方式，采用的是复合选择器的方式，对box4移入状态下的box5进行显示操作 */
+      .box4:hover .box5 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3">
+      刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁
+    </div>
+
+    <div class="box4">
+      <div class="box5"></div>
+      <img src="images/liuyaren.png" alt="" />
+    </div>
+  </body>
+</html>
