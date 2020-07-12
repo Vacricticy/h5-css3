@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        background-color: orange;
+        /* 单行文字溢出时省略号显示： */
+        /* 1.先强制文本一行显示 */
+        white-space: nowrap;
+        /* 2.溢出的部分隐藏起来 */
+        overflow: hidden;
+        /* 3.用省略号代替超出的部分 */
+        text-overflow: ellipsis;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 42px;
+        background-color: orange;
+        margin-top: 10px;
+
+        /* 多行文字溢出时省略号显示 */
+        /* 因为兼容性比较大，所以实际开发中推荐后台人员处理 */
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* 弹性伸缩盒子显示 */
+        display: -webkit-box;
+        /* 限制一个块元素显示文本的行数 */
+        -webkit-line-clamp: 2;
+        /* 设置伸缩盒对象的子元素的排列方式 */
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁</div>
+
+    <div class="box2">
+      刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁刘亚仁
+    </div>
+  </body>
+</html>

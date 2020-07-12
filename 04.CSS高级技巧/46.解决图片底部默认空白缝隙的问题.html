@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 2px solid orange;
+      }
+      .box img {
+        /* 解决方法1:使用vertical-align */
+        vertical-align: top;
+
+        /* 解决方法二：因为只有行内元素和行内块元素才有vertical-align这个属性，所以可以将其转换为块元素 */
+        /* 通常不这么使用，会破坏布局 */
+        /* display: block; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 问题描述：由于行内元素默认是与文字的基线对齐，所以图片的底部会有一定的空隙 -->
+    <div class="box">
+      <img src="../images/liuyaren.png" alt="" />liuyaren刘亚仁
+    </div>
+  </body>
+</html>

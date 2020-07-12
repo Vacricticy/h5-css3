@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul > li {
+        height: 40px;
+        background-color: orange;
+        margin-bottom: 10px;
+      }
+      /* input {
+        outline: none;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- 1.鼠标样式 -->
+    <ul>
+      <li style="cursor: default;">默认鼠标箭头样式</li>
+      <li style="cursor: pointer;">手指样式</li>
+      <li style="cursor: move;">移动样式</li>
+      <li style="cursor: text;">文本样式</li>
+      <li style="cursor: not-allowed;">禁止样式</li>
+    </ul>
+
+    <!-- 2.清除input表单元素的默认轮廓线 -->
+    <input type="text" style="outline: none;" />
+
+    <!-- 3.禁止文本域拖拽 -->
+
+    <!-- 注意：textarea文本域也存在默认的边框 -->
+    <textarea style="resize: none; outline: none;"></textarea>
+  </body>
+</html>

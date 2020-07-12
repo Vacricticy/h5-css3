@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 0;
+        height: 0;
+        border-top: 50px solid red;
+        border-right: 50px solid orange;
+        border-bottom: 50px solid yellow;
+        border-left: 50px solid green;
+      }
+      .box2 {
+        /* 单个三角形的实现原理：
+            首先设置元素的宽高为0，然后设置每一边的边框颜色为透明色，最后将想要的三角形所对应的方向的颜色设置为想要的颜色。
+
+            注意：
+            这个三角形其完整形式其实是一个正方形，只是另外的3/4设置为了透明。
+            三角形的大小是通过边框的粗细来确定的。
+          */
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: black;
+
+        /* 以下代码用于解决低版本的兼容性问题 */
+        line-height: 0;
+        font-size: 0;
+      }
+
+      .box3 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      .box3 span {
+        position: absolute;
+        right: 30px;
+        top: -20px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3">
+      <span></span>
+    </div>
+  </body>
+</html>

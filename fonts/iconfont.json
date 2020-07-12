@@ -1,0 +1,86 @@
+{
+  "id": "1938719",
+  "name": "liuxiaokang",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "978354",
+      "name": "微信",
+      "font_class": "gongzhonghao",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "2506382",
+      "name": "就绪",
+      "font_class": "jiuxu",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "11219357",
+      "name": "product-brand",
+      "font_class": "product-brand",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12193153",
+      "name": "brand book",
+      "font_class": "brandbook",
+      "unicode": "eb99",
+      "unicode_decimal": 60313
+    },
+    {
+      "icon_id": "15361450",
+      "name": "avatar08",
+      "font_class": "08",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "15362375",
+      "name": "avatar06",
+      "font_class": "06",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "15432397",
+      "name": "彩虹",
+      "font_class": "caihong",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "15432404",
+      "name": "山崩-滑坡",
+      "font_class": "shanbeng-huapo",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "15432406",
+      "name": "火山",
+      "font_class": "huoshan",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "15432417",
+      "name": "火灾",
+      "font_class": "huozai",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "15432422",
+      "name": "太阳",
+      "font_class": "taiyang",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    }
+  ]
+}

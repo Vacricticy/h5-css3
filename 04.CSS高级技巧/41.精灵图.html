@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 236px;
+        height: 128px;
+        background: url(../images/sprite.png) no-repeat 0 -219px;
+      }
+      .box2 {
+        background: url(../images/sprite.png) no-repeat -1px -107px;
+        width: 22px;
+        height: 23px;
+        margin-top: 10px;
+      }
+      .box3 {
+        background: url(../images/sprite.png) no-repeat -252px -88px;
+        width: 18px;
+        height: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 精灵技术的目的：减少请求服务器的次数，提高页面的加载效率 -->
+
+    <!-- 精灵图的实现需要借助背景图片的位置background-position来实现 -->
+
+    <!-- background-position中，向右移取值为正，向左移取值为负。向下移取值为正，向上移取值为负 -->
+
+    <!-- 精灵图在线测量网站：http://www.spritecow.com/ -->
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+  </body>
+</html>
