@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        /* 内容宽高设置为0, */
+        width: 0;
+        height: 0;
+
+        /* 只设置上边框和右边框，且上边框的宽度大于右边框，上边框设置为透明色 */
+        border-top: 100px solid transparent;
+        border-right: 50px solid orange;
+        /* border-bottom: 0 solid transparent;
+        border-left: 50px solid transparent; */
+      }
+
+      .box2 {
+        width: 500px;
+        height: 100px;
+        border: 2px solid orange;
+        margin: 0 auto;
+        line-height: 100px;
+        text-align: center;
+      }
+      .span1 {
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 200px;
+        background-color: red;
+      }
+      i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 200px solid transparent;
+        border-right: 100px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <div class="box2">
+      <span class="span1"
+        >111
+        <i></i>
+      </span>
+      <span>222</span>
+    </div>
+  </body>
+</html>

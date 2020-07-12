@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      video {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 谷歌浏览器考虑到手机端访问网站自动播放视频会造成流量消耗，所以关闭了自动播放。
+        在谷歌浏览器中，为了实现自动播放，除了要添加autoplay属性外，还需要通过muted属性实现静音播放来解决自动播放的问题 -->
+
+    <!-- controls属性用于显示视频播放时的控件 -->
+
+    <!-- loop表示循环播放 -->
+
+    <!-- poster用于视频未加载完时显示的图片 -->
+    <video
+      src="../videos/movie.mp4"
+      autoplay
+      muted
+      controls
+      loop
+      poster="../images/liuyaren.png"
+    ></video>
+  </body>
+</html>

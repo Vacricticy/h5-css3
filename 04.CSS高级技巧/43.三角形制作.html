@@ -15,10 +15,10 @@
       }
       .box2 {
         /* 单个三角形的实现原理：
-            首先设置元素的宽高为0，然后设置每一边的边框颜色为透明色，最后将想要的三角形所对应的方向的颜色设置为想要的颜色。
+            元素的内容宽高设置为0，然后通过设置上下左右边框的宽度，可以实现4个三角形组成的正方形，再通过控制某些边框为隐藏就可实现三角形的效果。
 
+            最好的方式是为每一个边框都设置宽度，然后隐藏不需要显示的边框。
             注意：
-            这个三角形其完整形式其实是一个正方形，只是另外的3/4设置为了透明。
             三角形的大小是通过边框的粗细来确定的。
           */
         width: 0;
@@ -46,6 +46,14 @@
         border: 10px solid transparent;
         border-bottom-color: orange;
       }
+
+      .box4 {
+        margin-top: 10px;
+        width: 0;
+        height: 0;
+        border-top: 50px solid orange;
+        border-right: 50px solid transparent;
+      }
     </style>
   </head>
   <body>
@@ -55,5 +63,7 @@
     <div class="box3">
       <span></span>
     </div>
+
+    <div class="box4"></div>
   </body>
 </html>
