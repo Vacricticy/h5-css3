@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      .box1 {
+        background-color: red;
+        z-index: 1;
+      }
+      .box2 {
+        top: 20px;
+        left: 20px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <!-- 注意：只有带有定位的盒子才有z-index属性
+    z-index中的z可以理解为z轴，值越大越靠前。
+    z-index的默认值为auto，即0
+-->
+  <body>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+  </body>
+</html>
