@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        outline: none;
+      }
+      /* 修改placeholder的样式 */
+      input::placeholder {
+        color: orange;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px grey;
+        border: 1px solid red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <!-- required属性：输入不能为空
+            placeholder
+            autofocus属性：自动获取焦点
+            autocomplete属性，当表单元素带有name属性时，点击表单会显示之前输入过的值。浏览器默认是设置为的on,若关闭则修改为off
+
+            multiple属性：多选文件
+        -->
+      <input
+        type="search"
+        required
+        placeholder="请输入内容"
+        autofocus
+        name="uname"
+        autocomplete="off"
+      />
+      <br />
+      <input type="file" multiple /> <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

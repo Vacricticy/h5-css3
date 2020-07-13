@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* :first-child会先把ul所有的子元素排序，然后选择第一个元素，且这个元素必须是li */
+      ul li:first-child {
+        color: green;
+      }
+
+      ul li:last-child {
+        color: green;
+      }
+
+      /* :nth-child(n)中的n可以为数字 */
+      ul li:nth-child(5) {
+        color: green;
+      }
+
+      /* :nth-child(n)中的n可以为关键字even，odd */
+      /* 选择偶数项 */
+      ul li:nth-child(even) {
+        background-color: yellow;
+      }
+      /* 选择奇数项 */
+      ul li:nth-child(odd) {
+        background-color: grey;
+      }
+
+      /* :nth-child(n)中的n可以为公式 */
+      /* n表示从0到最后，第一个元素表示1。 */
+      /* 2n表示偶数，2n+1表示奇数，n+5表示从第五项到最后，-n+3表示前三项 */
+      ul li:nth-child(n) {
+        font-size: 20px;
+      }
+
+      ul li:nth-child(-n + 3) {
+        text-shadow: 2px 2px 2px black;
+      }
+
+      /* :first-child与:first-of-type的区别： */
+      /* :first-of-type会先将所有的‘指定’元素排序，然后选择其中的第一个 */
+      /* 而:first-child是将所有的子元素排序，然后选择满足第一个元素，且该元素必须是对应的标签 */
+      ol div:first-of-type {
+        background-color: orange;
+      }
+
+      /* 结构伪类选择器的权重为10 */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <!-- <div>刘亚仁</div> -->
+      <li>刘亚仁1</li>
+      <li>刘亚仁2</li>
+      <li>刘亚仁3</li>
+      <li>刘亚仁4</li>
+      <li>刘亚仁5</li>
+      <li>刘亚仁6</li>
+      <li>刘亚仁7</li>
+      <li>刘亚仁8</li>
+      <li>刘亚仁9</li>
+      <li>刘亚仁10</li>
+    </ul>
+    <ol>
+      <div>刘亚仁</div>
+      <li>刘亚仁1</li>
+      <li>刘亚仁2</li>
+      <li>刘亚仁3</li>
+      <li>刘亚仁4</li>
+      <li>刘亚仁5</li>
+      <li>刘亚仁6</li>
+      <li>刘亚仁7</li>
+      <li>刘亚仁8</li>
+      <li>刘亚仁9</li>
+      <li>刘亚仁10</li>
+    </ol>
+  </body>
+</html>

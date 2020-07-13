@@ -47,6 +47,14 @@
         color: rgb(5, 190, 5);
         font-size: 80px;
       }
+      .box::before {
+        font-family: "iconfont" !important;
+        /* content: "&#xe69a;"; */
+        /* 需要把&#e改为\ */
+        content: "\e63e";
+        color: skyblue;
+        font-size: 100px;
+      }
     </style>
   </head>
   <body>
@@ -72,9 +80,12 @@
         symbol引用（未来的主流，支持多色图标，有兼容性问题）
     -->
     <!-- unicode引用: -->
+    <!-- 这种方式在实际应用中可以结合css3新增的伪元素选择器一起使用，直接将::before的content设置为‘\e63e;’这种形式,注意：$#x需要改为\,还需要设置icon-family属性 -->
     <span class="iconfont wechat1">&#xe63e;</span>
     <span class="iconfont">&#xe69a;</span>
-
+    <br />
+    <div class="box"></div>
+    <br />
     <!-- font-class引用： -->
     <span class="iconfont icongongzhonghao wechat2"></span>
     <span class="iconfont iconcaihong"></span>

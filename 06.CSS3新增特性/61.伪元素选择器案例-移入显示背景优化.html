@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+      }
+      .box img {
+        width: 100%;
+      }
+      .box::before {
+        /* 通过伪元素选择器创建的元素默认是行内元素 */
+        /* 元素加了绝对定位或固定定位或添加了浮动后会变成行内块元素，此时才可以设置宽高 */
+        display: none;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3) url("../images/play.png") no-repeat
+          center;
+      }
+      .box:hover::before {
+        display: block;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../images/liuyaren.png" alt="" />
+    </div>
+  </body>
+</html>

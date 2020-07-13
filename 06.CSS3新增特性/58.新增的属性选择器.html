@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 注意：属性选择器是指中括号里面的内容，整个选择器包含了前面的标签选择器和后面的属性选择器 */
+      /* 属性选择器的权重为10 */
+
+      /* 选择包含有value属性的input元素 */
+      input[value] {
+        color: red;
+      }
+      /* 选择type属性等于password的input元素 */
+      input[type="password"] {
+        color: orange;
+      }
+
+      /* 选择class属性以box开头的div元素 */
+      div[class^="box"] {
+        color: orange;
+      }
+
+      /* 选择class属性以data结尾的section元素 */
+      section[class$="data"] {
+        color: skyblue;
+      }
+
+      /* 选择calss属性包含bo的所有div元素 */
+      div[class*="bo"] {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" value="haha" /><br />
+    <input type="text" />
+    <input type="password" />
+
+    <div class="box1">刘亚仁1</div>
+    <div class="box2">刘亚仁2</div>
+    <div class="box3">刘亚仁3</div>
+    <div class="box4">刘亚仁4</div>
+    <div class="bo">刘亚仁4</div>
+    <br />
+
+    <section class="icon_data">刘小康1</section>
+    <section class="icon_data">刘小康2</section>
+    <section class="icon_bala">刘小康3</section>
+    <section class="icon_bala">刘小康4</section>
+  </body>
+</html>
