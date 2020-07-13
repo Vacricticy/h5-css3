@@ -13,11 +13,11 @@
         height: 100px;
         background-color: yellow;
         border: 1px solid grey;
-        /* 解决：通过margin-left向左移动一个单位的距离，可以消除两个li的border多粗来的部分 */
+        /* 解决：通过margin-left向左移动一个单位的距离，可以消除两个li相邻的border多粗来的部分 */
         margin-left: -1px;
       }
       li:hover {
-        /* 上述操作或有副作用：若移入元素时想要改变边框的颜色，此时右边框不能正常显示，因为其已经被右边元素的左边框盖住了 */
+        /* 上述操作的副作用：若移入元素时想要改变边框的颜色，此时右边框不能正常显示，因为右边框已经被右边元素的左边框盖住了 */
         /* 解决方法： */
         border-color: black;
         /* 方法一：
@@ -26,7 +26,7 @@
         /* position: relative; */
 
         /* 方法二：通过z-index提高层级 */
-        /* 注意：只有带有定位的元素才能使用z-index */
+        /* 注意：但只有带有定位的元素才能使用z-index。。。。 */
         position: relative;
         z-index: 2;
       }

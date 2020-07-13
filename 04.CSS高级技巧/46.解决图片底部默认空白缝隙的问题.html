@@ -10,10 +10,12 @@
       }
       .box img {
         /* 解决方法1:使用vertical-align */
-        vertical-align: top;
+        /* vertical-align: top; */
+        /* vertical-align: bottom; */
+        vertical-align: middle;
 
         /* 解决方法二：因为只有行内元素和行内块元素才有vertical-align这个属性，所以可以将其转换为块元素 */
-        /* 通常不这么使用，会破坏布局 */
+        /* 但通常不这么使用，因为会破坏布局 */
         /* display: block; */
       }
     </style>
