@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* ❤❤❤ 将所有元素的盒子模型都修改为border-box */
+  box-sizing: border-box;
 }
 
 /* 斜体文字不倾斜 */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 20px;
+        border: 1px solid red;
+        border-radius: 10px;
+        margin: 100px auto;
+        cursor: pointer;
+      }
+      span {
+        display: inline-block;
+        height: 100%;
+        width: 10%;
+        border-radius: 10px 0 0 10px;
+        background-color: red;
+        transition: all 1s;
+      }
+      /* 关键点：hover应该用在div上 */
+      div:hover span {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span></span>
+    </div>
+  </body>
+</html>

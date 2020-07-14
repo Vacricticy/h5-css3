@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .logo {
+        width: 200px;
+        height: 200px;
+      }
+      .logo a {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background: url(../images/liuyaren.png) no-repeat;
+
+        /* font-size: 0; */
+
+        text-indent: -999px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 首先是一个装logo的盒子 -->
+    <div class="logo">
+      <!-- 要点1：需要在最外层包裹一个h1标签，用于提升权重，告诉搜索引擎，这个地方很重要 -->
+      <h1>
+        <!-- 要点2：h1中需要放置一个a标签，用于返回首页，logo的背景图片直接设置在该a标签上 -->
+
+        <!-- 要点3：隐藏a标签里面的文字
+        方法一（京东）：将font-size设置为0
+        方法二（淘宝）：先通过text-indent移到盒子的外面，再通过overflow:hidden隐藏多出来的部分 -->
+
+        <!-- 要点4：给链接一个title属性 -->
+        <a href="#" title="刘亚仁">刘亚仁</a>
+      </h1>
+    </div>
+  </body>
+</html>

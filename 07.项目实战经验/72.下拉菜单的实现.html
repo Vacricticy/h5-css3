@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        position: relative;
+        width: 100px;
+        height: 50px;
+        margin: 100px auto;
+      }
+      .dt {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .dd {
+        /* 要点2：下面的元素默认设置为隐藏 */
+        display: none;
+        /* 要点4：将第二个元素的定位设为绝对定位，使其脱离标准流，不影响后面的元素 */
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        background-color: orange;
+        transition: all 0.3s;
+      }
+      li {
+        list-style: none;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        /* box-sizing: border-box; */
+        margin: 0 5px;
+        /* 要点5：实现鼠标移入li添加下边框，但不撑大盒子的前提：先为每一个li添加一个带有宽度的透明的下边框 */
+        border-bottom: 1px solid transparent;
+
+        cursor: pointer;
+      }
+      /* 要点3：当鼠标移入最外面的盒子时，将第二个元素显示出来 */
+      .box:hover .dd {
+        display: block;
+      }
+      li:hover {
+        border-bottom: 1px solid white;
+      }
+      li:hover a {
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- 要点1：上下两个元素都必须是块元素，且上面的元素宽高需要设置为100% -->
+      <div class="dt">项目</div>
+      <div class="dd">
+        <ul>
+          <li><a href="#">6666</a></li>
+          <li><a href="#">6666</a></li>
+          <li><a href="#">6666</a></li>
+        </ul>
+      </div>
+      <div>balabadddddddddddddddddddddddla</div>
+    </div>
+  </body>
+</html>

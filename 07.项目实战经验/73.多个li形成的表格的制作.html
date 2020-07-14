@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        margin: 100px auto;
+        /* 要点2：为最外面的父元素添加上边框和左边框 */
+        border-top: 1px solid grey;
+        border-left: 1px solid grey;
+
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+      }
+      ul > li {
+        float: left;
+        width: 100px;
+        height: 100px;
+        /* 要点1：为每一个li添加右边框和下边框 */
+        border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+        list-style: none;
+
+        text-align: center;
+        line-height: 99px;
+        cursor: pointer;
+        /* 显示阴影的时候加入过渡效果 */
+        transition: all 0.3s;
+      }
+      /* 此时存在一个问题：因为父元素设置了边框，且盒子模型为border-box,所以内部的内容会变小一点。
+      此时可以为ul增加一点宽度来解决这个问题*/
+      ul {
+        width: 402px;
+      }
+      li:hover {
+        /* background-color: orange; */
+        /* color: white; */
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+      </ul>
+    </div>
+  </body>
+</html>
