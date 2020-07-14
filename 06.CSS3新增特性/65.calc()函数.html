@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+      }
+      .son {
+        /* width: 300px; */
+        /* 设置子元素的宽度在任何条件都比父元素少30px */
+        width: calc(100% - 30px);
+        height: 20px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

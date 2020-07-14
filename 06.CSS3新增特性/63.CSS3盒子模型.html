@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+        box-sizing: border-box;
+        border: 10px solid red;
+        padding: 50px;
+        text-align: center;
+        /* ❤❤❤ 由于此时盒子模型为border-box,且设置了border和padding，所以要想实现文字垂直居中，必须减去上下的border和padding */
+        line-height: 380px;
+      }
+    </style>
+    <!-- CSS3中盒子模型用box-sizing来表示
+    元素默认的盒子模型为content-box,即整个盒子的大小由width,padding,border的值决定，因此会存在padding和border撑开盒子的情况。
+    另一种盒子模型为border-box，此时整个盒子的大小由width的值固定，即盒子的大小时固定不变的，padding和border只会在他的内部变化。 -->
+  </head>
+  <body>
+    <div>balabala</div>
+  </body>
+</html>

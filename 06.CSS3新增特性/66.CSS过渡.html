@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css3的过渡（transition）是css3中具有颠覆性的特征之一
+        transition:要过渡的属性 花费时间（单位为s） 运动曲线 何时开始
+
+        1.要过渡的属性包括：宽高，背景颜色，内外边距，all表示所有改变的属性都有过渡效果
+
+        2. 花费时间（单位为s）
+
+        3.运动曲线（可以省略）：默认为ease(逐渐变慢) linear：匀速  
+
+        4.何时开始（可以省略）：可以设置延时触发的时间，单位为s，默认为0，即立即触发过渡效果
+
+        是给想要有过渡效果的元素添加过渡
+    -->
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        /* 注意：多个属性的过渡只能使用逗号隔开，不能单独写一行 */
+        transition: width 0.5s, height 0.5s;
+        /* 对所有改变的属性实行过渡效果 */
+        /* transition: all 0.5s; */
+      }
+      .box1:hover {
+        width: 300px;
+        height: 400px;
+        background-color: red;
+      }
+
+      .box2 {
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        transition: all 0.3s;
+        border-radius: 20px;
+      }
+      .box2 img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      .box2:hover {
+        margin: 98px auto;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div>333</div>
+
+    <div class="box2">
+      <img src="../images/liuyaren.png" alt="" />
+    </div>
+  </body>
+</html>

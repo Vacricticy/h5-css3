@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-right: 10px;
+      }
+      .box3 {
+        width: 800px;
+        height: 600px;
+        background-color: green;
+      }
+      /* 方法一：单伪元素 */
+      .clearfix::after {
+        content: "";
+        display: block;
+        /* 清除浮动 */
+        clear: both;
+        /* height: 0;
+        visibility: hidden; */
+      }
+
+      /* 方法二：双伪元素 */
+      .clearfix2::before,
+      .clearfix2::after {
+        content: "";
+        /* 让这两个元素在一行显示 */
+        display: table;
+      }
+      .clearfix2::after {
+        /* 清除浮动 */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clearfix2">
+      <div class="box1"></div>
+      <div class="box1"></div>
+    </div>
+    <div class="box3"></div>
+  </body>
+</html>
