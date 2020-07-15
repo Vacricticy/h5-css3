@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        perspective: 500px;
+      }
+      .father {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        transition: all 2s;
+      }
+      .father div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+      }
+      .father div:last-child {
+        background-color: red;
+        transform: rotateX(60deg);
+      }
+      .father:hover {
+        /* 当给父元素也添加3D动画旋转效果时，会存在子元素的旋转效果消失的现象 */
+        /* 解决方法：
+            将父元素的transform-style改为preserve-3D 
+            transform-style的默认值为flat，表示不开启子元素的3D空间。
+            preserve-3D表示开启子元素的3D空间
+        */
+        transform: rotateY(45deg);
+        transform-style: preserve-3d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="div1"></div>
+      <div class="div2"></div>
+    </div>
+  </body>
+</html>

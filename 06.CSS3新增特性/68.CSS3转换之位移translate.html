@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- css3的转换（transform）是css3中具有颠覆性的特征之一 -->
+
+    <!-- CSS3转换之转移translate类似于定位，用于改变元素在页面中的位置 -->
+    <!-- translate最大的特点就是不会影响其他元素的位置 -->
+    <!-- translate对行内元素没有效果 -->
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+
+        transition: all 0.3s;
+      }
+      .box:hover {
+        /* transform: translate(20px, 20px); */
+        /* transform: translateX(20px); */
+        /* 如果参数是百分比，则相对的是自己的大小 */
+        transform: translate(50%, 50%);
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      .box2 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+      }
+      .box3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* 实际应用中，一般采用绝对定位+translate移动-50%的方法实现居中对齐 
+          这样的好处相比于将margin-left设置为负数来说，不需要设置具体的像素，只需要设置百分比为-50%
+        */
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="box3"></div>
+    </div>
+  </body>
 </html>

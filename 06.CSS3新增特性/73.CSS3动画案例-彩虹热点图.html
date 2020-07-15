@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 50%;
+        width: 700px;
+        height: 700px;
+        margin: 10px auto;
+      }
+      .centerbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+      }
+      div[class^="div"] {
+        /* 要点1：需要定位至中心，这样才能从中心开始扩散 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        /* 要点2：设置为无效循环，速度为匀速 */
+        animation: spread 1.4s linear infinite;
+      }
+      .box .div1 {
+        box-shadow: 0 0 10px red;
+      }
+      .box .div2 {
+        /* 要点3（核心）：为每一个圈单独设置延迟时间 */
+        animation-delay: 0.2s;
+        box-shadow: 0 0 10px orange;
+      }
+      .box .div3 {
+        animation-delay: 0.4s;
+        box-shadow: 0 0 10px yellow;
+      }
+      .box .div4 {
+        animation-delay: 0.6s;
+        box-shadow: 0 0 10px green;
+      }
+      .box .div5 {
+        animation-delay: 0.8s;
+        box-shadow: 0 0 10px rgb(0, 228, 0);
+      }
+      .box .div6 {
+        animation-delay: 1s;
+        box-shadow: 0 0 10px blue;
+      }
+      .box .div7 {
+        /* 要点4：最后一个圈的延迟时间加上时间差最好等于整个动画的持续时间，这样可以无间隙的实现循环动画 */
+        animation-delay: 1.2s;
+        box-shadow: 0 0 10px purple;
+      }
+      @keyframes spread {
+        0% {
+        }
+        20% {
+          /* 要点5：这里不使用transform:scale的原因是缩放也会使阴影等比例缩放。我们想要的效果只是宽高变大，阴影的大小不变 */
+          width: 1px;
+          height: 1px;
+          opacity: 0.5;
+        }
+        70% {
+          width: 100px;
+          height: 100px;
+          opacity: 1;
+        }
+        100% {
+          width: 200px;
+          height: 200px;
+          /* 要点6：最后将透明度设置为0，就不会显得很突兀，有一种渐变的感觉 */
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="centerbox">
+        <div class="center">成都</div>
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+      </div>
+    </div>
+  </body>
+</html>

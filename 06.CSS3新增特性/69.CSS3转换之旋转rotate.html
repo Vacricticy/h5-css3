@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        旋转的实现：transform:rotate(45deg)
+        参数为正表示顺时针旋转，为负表示逆时针旋转
+        默认的旋转中心为元素的中心。
+        ❤❤❤rotate里面的度数始终是相对于最初始的位置的。
+
+        设置旋转中心点transform-origin:x y;
+        其中x和y可以是百分比和数值，相对的该元素内部的位置。也可以是方位left right top bottom center
+      */
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        transition: all 0.3s;
+      }
+      .box1:hover {
+        transform: rotate(45deg);
+      }
+
+      /* 外部表盘 */
+      .clock {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: #fff;
+        margin: 100px auto;
+        border-radius: 100%;
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      /* 内部指针 */
+      .box2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 240px;
+        height: 20px;
+        transform: rotate(-135deg);
+        /* 修改旋转中心 */
+        transform-origin: left center;
+        transition: all 2s;
+      }
+      .left {
+        float: left;
+        width: 190px;
+        height: 100%;
+        background-color: black;
+        border-radius: 10px 0 0 10px;
+      }
+      .right {
+        float: left;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left: 20px solid black;
+      }
+      .clock:hover .box2 {
+        transform: rotate(225deg);
+      }
+
+      /* 搜索框 */
+      .box3 {
+        position: relative;
+        width: 200px;
+        height: 20px;
+        border: 1px solid grey;
+      }
+      .box3::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        width: 8px;
+        height: 8px;
+        /* 三角形效果要点1： */
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+      .box3:hover::after {
+        /* 三角形效果要点2： */
+        transform: rotate(225deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <!-- 时钟效果 -->
+    <div class="clock">
+      <div class="box2">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+
+    <!-- 通过右边框和下边框+rotate实现三角形效果 -->
+    <div class="box3"></div>
+  </body>
+</html>

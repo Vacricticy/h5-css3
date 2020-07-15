@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        perspective: 500px;
+      }
+      img {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+        transition: all 2s;
+      }
+      .img1:hover {
+        /* 注意参数的单位是deg */
+        /* 注意rotate与rotateX的区别：
+        rotate是围绕某一中心点做二维平面内元素的旋转。
+        rotateX是围绕X轴做3D旋转 */
+
+        /* transform: rotateX(360deg); */
+        transform: rotateX(45deg);
+      }
+      .img2:hover {
+        transform: rotateY(45deg);
+      }
+      .img3:hover {
+        /* Z轴的3D旋转相当于在二维平面的旋转 */
+        transform: rotateZ(45deg);
+      }
+      .img4:hover {
+        /* 简写形式 */
+        /* rotate3d(x, y, z, 45deg) */
+        /* 前三个参数表示旋转的矢量，通过这三个参数可以确定三维空间的任意一个向量，该向量即为旋转轴 */
+        transform: rotate3d(2, 1, 0, 45deg);
+      }
+      /* 当取值为正数时，确认某一个轴的旋转方向，只需要将这个轴的箭头指向自己，然后顺时针方向就是旋转的方向 */
+    </style>
+  </head>
+  <body>
+    <img src="../images/liuyaren.png" alt="" class="img img1" />
+    <img src="../images/liuyaren.png" alt="" class="img img2" />
+    <img src="../images/liuyaren.png" alt="" class="img img3" />
+    <img src="../images/liuyaren.png" alt="" class="img img4" />
+  </body>
+</html>

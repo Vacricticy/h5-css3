@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 缩放的实现：transform:scale(x,y) 
+            其中x表示x轴缩放的倍数，y表示y轴缩放的倍数，等于1表示原元素的大小，大于1表示放大，大于0小于1表示缩小。
+
+            相比于直接设置宽高，使用scale的好处是缩放的时候不会影响其他元素的布局
+
+            缩放也可以通过transform-origin设置缩放的中心点
+        */
+
+      .box1 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+        margin: 100px auto;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3) inset;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .box2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: red;
+
+        transition: all 2s;
+        transform-origin: center center;
+      }
+      .box1:hover .box2 {
+        /* 关键点： */
+        transform: scale(50, 50);
+      }
+
+      .box3 {
+        width: 300px;
+        height: 300px;
+        /* 关键点：父元素设置隐藏 */
+        overflow: hidden;
+      }
+      .box3 img {
+        width: 100%;
+        transition: all 0.3s;
+      }
+      .box3:hover img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 中心点扩散效果 -->
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+
+    <!-- 图片放大效果 -->
+    <div class="box3">
+      <img src="../images/liuyaren.png" alt="" />
+    </div>
+    <div class="box3">
+      <img src="../images/liuyaren.png" alt="" />
+    </div>
+    <div class="box3">
+      <img src="../images/liuyaren.png" alt="" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(38, 130, 236);
+      }
+      .bear {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        /* 要点1：盒子的大小设置为每一个片段的大小 */
+        width: 200px;
+        height: 100px;
+        background: url(../images/bear.png) no-repeat;
+        /* 要点3：使用bear动画的时候采用steps的运动曲线，将整个过程分为8步，根据计算可以知道，每隔200px就会显示一次，此时刚好是对应的大熊 */
+        /* 使用多个动画必须在同一行使用，且需要用逗号隔开 */
+        animation: bear 1s steps(8) infinite, move 2s linear forwards;
+      }
+      @keyframes bear {
+        /* 要点2：背景的初始位置设置为0,0，最终的位置设置为最后 */
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -1600px 0;
+        }
+      }
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      /* 使用CSS3相对于gif动图的好处：
+      1.png格式的图片显示的颜色要远远多于gif的颜色
+      2.使用动画可以控制速度 */
+    </style>
+  </head>
+  <body>
+    <div class="bear"></div>
+  </body>
+</html>

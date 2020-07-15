@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 制作动画分为两步：首先定义动画，然后再调用动画 
+        动画相比于过渡的优点：
+            可以一次定义，多次使用。
+            可以自动播放，即在页面一加载就使用。
+            可以通过的动画序列实现多节点变化
+    -->
+    <style>
+      /* 1.定义动画 */
+      /* keyframes表示关键帧 
+        move表示该动画的名字
+      */
+      @keyframes move {
+        /* 0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(100px, 0);
+        } */
+
+        /* 上面的等效为 */
+        /* from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(100px, 0);
+        } */
+
+        /* 动画序列表示的是将整个动画持续的时间分为这么多个序列 */
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          /* 位移translate里面的参数相对的最初始的位置，而不是上一次动画结束的位置 
+            比如从25%到30%表示在这个过程中，花费的时间等于总时间的(30%-25%)
+          */
+          transform: translate(200px, 0);
+        }
+        30% {
+          transform: translate(200px, 200px);
+        }
+        75% {
+          transform: translate(0, 200px);
+        }
+        100% {
+          transform: translate(0, 0);
+          background-color: red;
+        }
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* 2.调用动画 */
+
+        /* 动画名称 */
+        /* animation-name: move; */
+
+        /* 动画持续时间 */
+        /* animation-duration: 2s; */
+
+        /* 运动曲线 */
+        /* animation-timing-function: ease; */
+        /* steps(5)表示整个动画分5步完成，每隔一步显示一次 */
+        /* animation-timing-function: steps(5); */
+
+        /* 延迟时间 */
+        /* animation-delay: 1s; */
+
+        /* 动画播放次数----默认为1次 */
+        /* animation-iteration-count: infinite; */
+        /* animation-iteration-count: 1; */
+
+        /* 若动画是多次播放的效果，每次播放结束后，可以设置返回原位置的方式，
+        normal表示直接从原位置开始下一次动画。
+        alternate表示每次动画结束后会按原路返回起点，再开始下一次的动画
+        */
+        /* animation-direction: alternate; */
+
+        /* 动画结束后元素停留的位置 */
+        /* 保持结束的状态 */
+        /* animation-fill-mode: forwards; */
+        /* 恢复初始的状态 */
+
+        /* 简写形式： */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* name和duration必须写 */
+        animation: move 2s 1s alternate forwards;
+      }
+      .box:hover {
+        /* 设置动画播放的状态为停止播放 */
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

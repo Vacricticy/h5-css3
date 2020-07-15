@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* 3D效果的实现必须结合透视才有效果 */
+
+        /* 3.透视距离需要设置在父元素上，一般透视距离都是固定的，改变的是元素距离最后屏幕的z轴的距离 */
+        perspective: 500px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 100px auto;
+        /* transform: translate(0,0),translateZ(100px); */
+        /* 上述等效于： */
+        transform: translate3d(0, 0, 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1.透视perspective距离是指眼睛与最后方的显示屏幕的距离，也被称为视距。
+        z轴的距离表示的是元素与最后方的显示屏幕的距离。
+
+        2.透视距离越大，显示效果越小。
+        z轴距离为正数时，数值越大，显示效果越大。为负数时，值越小，显示效果越小。总的来说，就是值越大，显示的也就越大。
+    
+    -->
+    <div class="box"></div>
+  </body>
+</html>
