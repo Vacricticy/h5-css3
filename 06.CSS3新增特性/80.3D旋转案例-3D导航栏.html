@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        height: 30px;
+        margin-top: 100px;
+      }
+      li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0 10px;
+
+        perspective: 500px;
+      }
+      .box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        transform-style: preserve-3d;
+        transition: all 0.3s;
+      }
+      .front,
+      .bottom {
+        width: 100%;
+        height: 100%;
+      }
+      .front {
+        background-color: orange;
+        /* 要点4：父元素最开始的旋转轴是外平面的X轴，为了实现在长方体的中心旋转，
+        需要将最外层的front和最下面的bottom向Z轴移出长方体高的一半，对应的即为hight的一半 */
+        transform: translateZ(15px);
+      }
+
+      .bottom {
+        /* 要点1：将下面的元素设置绝对定位，并向下移动100% */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: red;
+        /* 要点2：设置旋转中心为顶部，并向后旋转90deg，在调试的时候可以设置为80deg查看是否有效果。
+            ❤❤❤ 且需要为最外层动画元素的父元素添加透视距离perspective:500px实现3D的效果，
+            如果没有严格按照要求为该父元素添加该属性，则透视的效果会完全不同;
+        */
+        transform-origin: top;
+
+        transform: translateZ(15px) rotateX(-90deg);
+      }
+      .box:hover {
+        /* 要点3：为父元素添加旋转效果，此时需要为该父元素添加transform-style:preserve-3d */
+        transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="box">
+          <div class="front">刘亚仁</div>
+          <div class="bottom">666</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">刘亚仁</div>
+          <div class="bottom">666</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">刘亚仁</div>
+          <div class="bottom">666</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">刘亚仁</div>
+          <div class="bottom">666</div>
+        </div>
+      </li>
+    </ul>
+    <div>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>
+  </body>
+</html>

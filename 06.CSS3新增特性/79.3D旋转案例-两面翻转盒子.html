@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        perspective: 500px;
+      }
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 100px auto;
+        border-radius: 50%;
+        /* transition: all 3s; */
+        /* 要点2：由于子元素设置了3D旋转，所以父元素要旋转就必须设置transform-style为preserve-3d */
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+      @keyframes cicle {
+        from {
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      .box:hover {
+        /* transform: rotateY(180deg); */
+        animation: cicle 3s infinite;
+      }
+      .front,
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+      }
+      .front {
+        background-color: red;
+      }
+      .back {
+        /* 要点1（核心）：将后面的元素先旋转180度 */
+        background-color: orange;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="back">666</div>
+      <div class="front">刘亚仁</div>
+    </div>
+  </body>
+</html>
