@@ -16,7 +16,7 @@
       }
       .box::before {
         /* 通过伪元素选择器创建的元素默认是行内元素 */
-        /* 元素加了绝对定位或固定定位或添加了浮动后会变成行内块元素，此时还可以设置宽高 */
+        /* 元素加了绝对定位或固定定位或添加了浮动后会自动变成行内块元素，此时还可以设置宽高 */
         display: none;
         position: absolute;
         content: "";
@@ -24,11 +24,11 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.3) url("../images/play.png") no-repeat
           center;
+        cursor: pointer;
       }
       /* 关键点： */
       .box:hover::before {
         display: block;
-        cursor: pointer;
       }
     </style>
   </head>
