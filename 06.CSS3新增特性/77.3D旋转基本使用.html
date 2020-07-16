@@ -19,7 +19,15 @@
         /* 注意参数的单位是deg */
         /* 注意rotate与rotateX的区别：
         rotate是围绕某一中心点做二维平面内元素的旋转。
-        rotateX是围绕X轴做3D旋转 */
+        rotateX是围绕X轴做3D旋转 
+        
+        ❤❤❤ 注意：
+        每一次translate移动所参照的都是上一次旋转后的结果的面。
+        比如之前已经rotateX(-90deg),则再translateZ(90px)则表示向下移动90px。
+
+        同理，每一次旋转所参照的坐标系都是上一次移动后的坐标系。
+        比如之前已经translateZ(90px)，则再rotateX(-90deg)表示在之前的基础上再绕X轴逆向旋转90度。
+        */
 
         /* transform: rotateX(360deg); */
         transform: rotateX(45deg);

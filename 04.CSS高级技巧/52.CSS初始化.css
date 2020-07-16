@@ -48,11 +48,11 @@ body {
 
 /* 清除浮动 */
 .clearfix:after {
-  visibility: hidden;
+  /* visibility: hidden; */
   clear: both;
   display: block;
   content: ".";
-  height: 0;
+  /* height: 0; */
 }
 .clearfix {
   *zoom: 1;

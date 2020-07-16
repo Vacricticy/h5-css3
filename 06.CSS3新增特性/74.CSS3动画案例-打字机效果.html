@@ -20,21 +20,21 @@
 
         /* 要点2：运动曲线设置为steps，将整个过程分为12步，
         注意这里的步数存在这样的算法：
-            最后显示的宽度240px除以步数12等于每一步显示的宽度20px，应该让字体的大小等于这个20px，这样就可以实现每一步显示出一个字的效果*/
-        animation: typewriter 4s steps(12) forwards;
+            最后显示的宽度300px除以步数15表示每一步会多显示20px的宽度，如果让字体的大小等于这个20px，这样就可以实现每一步就多显示出一个字的效果*/
+        animation: typewriter 4s steps(15) forwards;
       }
       @keyframes typewriter {
         from {
           width: 0;
         }
         to {
-          width: 240px;
+          width: 300px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- <div class="box">欢迎来到刘小康的个人网站</div> -->
+    <div class="box">欢迎来到刘小康的个人网站哈哈哈</div>
     <div class="box">我喜欢你</div>
   </body>
 </html>

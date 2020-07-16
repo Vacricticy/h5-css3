@@ -16,7 +16,7 @@
         width: 200px;
         height: 100px;
         background: url(../images/bear.png) no-repeat;
-        /* 要点3：使用bear动画的时候采用steps的运动曲线，将整个过程分为8步，根据计算可以知道，每隔200px就会显示一次，此时刚好是对应的大熊 */
+        /* 要点3：使用bear动画的时候采用steps的运动曲线，将整个过程分为8步，根据计算可以知道，每一步就会向左移动200px的距离，此时刚好是下一张图片的大熊 */
         /* 使用多个动画必须在同一行使用，且需要用逗号隔开 */
         animation: bear 1s steps(8) infinite, move 2s linear forwards;
       }

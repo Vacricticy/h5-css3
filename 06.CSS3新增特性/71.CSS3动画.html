@@ -31,13 +31,15 @@
           transform: translate(100px, 0);
         } */
 
-        /* 动画序列表示的是将整个动画持续的时间分为这么多个序列 */
+        /* 动画序列表示的是将整个动画持续的时间分为这么多个时间序列 
+        比如从25%到30%表示在这个过程中，花费的时间等于总时间*(30%-25%)
+        */
+
         0% {
           transform: translate(0, 0);
         }
         25% {
-          /* 位移translate里面的参数相对的最初始的位置，而不是上一次动画结束的位置 
-            比如从25%到30%表示在这个过程中，花费的时间等于总时间的(30%-25%)
+          /* 位移translate里面的参数相对的最初始的位置，而不是上一次动画结束的位置             
           */
           transform: translate(200px, 0);
         }
@@ -76,8 +78,8 @@
         /* animation-iteration-count: infinite; */
         /* animation-iteration-count: 1; */
 
-        /* 若动画是多次播放的效果，每次播放结束后，可以设置返回原位置的方式，
-        normal表示直接从原位置开始下一次动画。
+        /* 若动画是‘多次播放’的效果，每次播放结束后，可以设置返回原位置的方式，
+        默认值normal表示直接从原位置开始下一次动画。
         alternate表示每次动画结束后会按原路返回起点，再开始下一次的动画
         */
         /* animation-direction: alternate; */
@@ -90,7 +92,7 @@
         /* 简写形式： */
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         /* name和duration必须写 */
-        animation: move 2s 1s alternate forwards;
+        animation: move 2s 1s infinite alternate forwards;
       }
       .box:hover {
         /* 设置动画播放的状态为停止播放 */
