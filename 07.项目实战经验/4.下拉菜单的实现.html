@@ -25,13 +25,16 @@
       }
       .dd {
         /* 要点2：下面的元素默认设置为隐藏 */
-        display: none;
+        /* display: none; */
         /* 要点4：将第二个元素的定位设为绝对定位，使其脱离标准流，不影响后面的元素 */
         position: absolute;
-        height: 300px;
+        /* height: 300px; */
+        height: 0;
         width: 100%;
         background-color: orange;
+        border-radius: 0 0 5px 5px;
         transition: all 2s;
+        overflow: hidden;
       }
       li {
         list-style: none;
@@ -47,7 +50,8 @@
       }
       /* 要点3：当鼠标移入最外面的盒子时，将第二个元素显示出来 */
       .box:hover .dd {
-        display: block;
+        /* display: block; */
+        height: 300px;
       }
       li:hover {
         border-bottom: 1px solid white;
