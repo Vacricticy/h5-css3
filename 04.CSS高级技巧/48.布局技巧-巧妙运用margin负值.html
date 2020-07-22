@@ -12,14 +12,14 @@
         width: 100px;
         height: 100px;
         background-color: yellow;
-        border: 1px solid grey;
+        border: 5px solid grey;
         /* 解决：通过margin-left向左移动一个单位的距离，可以消除两个li相邻的border多粗来的部分 */
-        margin-left: -1px;
+        margin-left: -5px;
       }
       li:hover {
         /* 上述操作的副作用：若移入元素时想要改变边框的颜色，此时右边框不能正常显示，因为右边框已经被右边元素的左边框盖住了 */
         /* 解决方法： */
-        border-color: black;
+        border-color: orange;
         /* 方法一：
             若该元素没有设置定位，则可以通过改成相对定位来实现，原理是相对定位的元素会盖住标准流和浮动的元素。
         */
