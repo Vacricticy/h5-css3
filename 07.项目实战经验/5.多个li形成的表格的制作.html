@@ -36,10 +36,13 @@
         cursor: pointer;
         /* 显示阴影的时候加入过渡效果 */
         transition: all 0.3s;
+
+        background-color: #fff;
       }
       li:hover {
-        /* background-color: orange; */
-        /* color: white; */
+        position: relative;
+        z-index: 999;
+        transform: scale(1.1);
         box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.3);
       }
     </style>
