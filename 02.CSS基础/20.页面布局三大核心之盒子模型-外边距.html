@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- 1.使块级元素居中对齐：利用外边距实现
+    <!-- 1.使‘块级元素’居中对齐：利用外边距实现
         前提：该块级元素必须设置了宽度。
         然后通过设置❤左右外边距为auto来实现
 
@@ -18,16 +18,25 @@
 
         解决外边距塌陷的方案见下面。
 
-        脱标（绝对定位，固定定位，浮动）的元素不存在外边距合并的现象。
+        外边距合并只存在于块级元素中，脱标（绝对定位，固定定位，浮动）的元素属于行内块元素，不存在外边距合并的现象。
         
         4.清除内外边距
+        *{
+          margin: 0;
+          padding: 0;
+        }
 
-        5.行内元素尽量只设置左右的内外边距，因为设置了上下边距也不会有效果。若非要设置，则转换为块级元素或行内块元素
-
-        6.补充知识：去除列表标签的原始样式
+        5.补充知识：去除列表标签的原始样式
         list-style:none;
     -->
     <style>
+      body {
+        overflow: hidden;
+      }
+      .liu {
+        background-color: tomato;
+        padding: 20px 20px;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -92,8 +101,10 @@
     </style>
   </head>
   <body>
+    <a class="liu" href="#">刘</a>
     <div class="box1">
       <div class="box2"></div>
+      <!-- <a class="liu" href="#">刘</a> -->
     </div>
     <div class="box1 box3">
       <img src="images/icon.png" alt="" />

@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 表单由三部分组成：表单域，表单控件（表单元素），提示信息 -->
     <!-- form标签即为表单域 -->
     <form action="xxx.html" method="get" name="form1">
-        <!-- 三大类表单元素：input:输入表单元素,select:下拉表单元素,textarea:文本域元素 -->
+      <!-- 三大类表单元素：input:输入表单元素,select:下拉表单元素,textarea:文本域元素 -->
 
-        <!-- 1.input表单元素 -->
+      <!-- 1.input表单元素 -->
 
-        <!-- input表单元素类型： text,password,radio,checkbox,submit,reset,button,file,hidden-->
+      <!-- input表单元素类型： 
+        文本，密码，单选按钮，复选框，提交按钮，重置按钮，普通按钮，选择文件按钮，隐藏按钮
+        text,password,radio,checkbox,submit,reset,button,file,hidden-->
 
-        <!-- input表单元素属性：
+      <!-- input表单元素属性：
             ❤ name属性表示input表单元素的名称，
             ❤ value表示input表单元素的值，
+            ❤ 提交表单的时候这两个属性必须有
             checkded属性用于单选按钮和复选框，表示默认选中的选项，
             maxlength表示输入字符的最大长度
          -->
-         
-         <!-- label标签的作用：增强用户体验，使label的文字与input表单元素绑定在一起 -->
-         <!-- label标签的for属性应与对应的input表单元素的id值保持一致 -->
 
-        <label for="username">用户名：</label> 
-        <input type="text" name="username" maxlength="8" id="username"><br>
-        <label for="pwd">密码：</label>
-        <input type="password" name="password" id="pwd"><br>
+      <!-- label标签的作用：增强用户体验，使label的文字与input表单元素绑定在一起 -->
+      <!-- label标签的for属性应与对应的input表单元素的id值保持一致 -->
 
-        <!-- 单选按钮需要使用相同的name值 -->
-        性别： <label for="m">男</label> <input type="radio" value="男" name="gender" id="m"> 
-        <label for="f">女</label>  <input type="radio" value="女" name="gender" checked="checked" id="f"><br>
+      <label for="username">用户名：</label>
+      <input type="text" name="username" maxlength="8" id="username" /><br />
+      <label for="pwd">密码：</label>
+      <input type="password" name="password" id="pwd" /><br />
 
-        <!-- 复选框也需要使用相同的name值 -->
-        爱好：
-        <label for="music">音乐</label>
-        <input type="checkbox" name="hobby" checked value="music" id="music">
-        <label for="photograph">摄影</label>
-        <input type="checkbox" name="hobby" checked value="photograph" id="photograph"> 
-        <label for="swimming">游泳</label>
-        <input type="checkbox" name="hobby" value="swimming" id="swimming">
-         <br>
-         <!-- 提交按钮 -->
-         <input type="submit" value="提交表单">
-         <!-- 重置按钮 -->
-         <input type="reset" value="重置表单">
+      <!-- 单选按钮需要使用相同的name值 -->
+      性别： <label for="m">男</label>
+      <input type="radio" value="男" name="gender" id="m" />
+      <label for="f">女</label>
+      <input
+        type="radio"
+        value="女"
+        name="gender"
+        checked="checked"
+        id="f"
+      /><br />
 
-         <!-- 普通按钮 -->
-         <input type="button" value="普通按钮">
+      <!-- 复选框也需要使用相同的name值 -->
+      爱好：
+      <label for="music">音乐</label>
+      <input type="checkbox" name="hobby" checked value="music" id="music" />
+      <label for="photograph">摄影</label>
+      <input
+        type="checkbox"
+        name="hobby"
+        checked
+        value="photograph"
+        id="photograph"
+      />
+      <label for="swimming">游泳</label>
+      <input type="checkbox" name="hobby" value="swimming" id="swimming" />
+      <br />
+      <!-- 提交按钮 -->
+      <input type="submit" value="提交表单" />
+      <!-- 重置按钮 -->
+      <input type="reset" value="重置表单" />
 
-         <!-- 文件域按钮（上传文件） -->
-         <input type="file">
+      <!-- 普通按钮 -->
+      <input type="button" value="普通按钮" />
 
-         <!-- 隐藏按钮 -->
-         <input type="hidden" name="" value="444"><br>
+      <!-- 文件域按钮（上传文件） -->
+      <input type="file" />
 
-         <!-- 2.select下拉表单元素 -->
-         籍贯：
-         <select name="hometown" id="">
-             <option value="">--请选择籍贯--</option>
-             <option value="成都">成都</option>
-             <option value="达州" selected="selected">达州</option>
-             <option value="广安">广安</option>
-         </select><br>
+      <!-- 隐藏按钮 -->
+      <input type="hidden" name="" value="444" /><br />
 
-         <!-- 3.textarea文本域元素 -->         
-         个人简介：<textarea name="" id="" cols="20" rows="4"></textarea>
+      <!-- 2.select下拉表单元素 -->
+      籍贯：
+      <select name="hometown" id="">
+        <option value="">--请选择籍贯--</option>
+        <option value="成都">成都</option>
+        <option value="达州" selected="selected">达州</option>
+        <option value="广安">广安</option> </select
+      ><br />
 
+      <!-- 3.textarea文本域元素 -->
+      个人简介：<textarea name="" id="" cols="20" rows="4"></textarea>
     </form>
-</body>
+  </body>
 </html>

@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      .orange {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
     <!-- 表格标签 -->
     <!-- 表格标签的属性：align,border,cellpadding,cellspacing,width,height -->
     <!-- align表示表格相对于周围元素的对齐方式 -->
     <!-- cellpadding表示内容与单元格之间的距离 -->
     <!-- cellspacing表示单元格与单元格之间的距离 -->
-    <table align="center" border="1" cellpadding="20" cellspacing="0" width="500">
-        <!-- 表格结构标签：<thead> <tbody> 目的是为了更好的表示表格的语义 -->
-        <thead>
-            <tr>
-                <!-- 两种单元格： -->
-                <!-- 1.表头单元格标签，其中的内容会居中并加粗显示 -->
-                <th>姓名</th>
-                <th>性别</th>
-                <th>电话</th>
-            </tr>            
-        </thead>
-        <tbody>
-            <tr>
-                <!-- 2.普通单元格 -->
-                <td>刘小康</td>
-                <th>男</th>
-                <td>10086</td>
-            </tr>
-        </tbody>    
+    <table
+      align="center"
+      border="1"
+      cellpadding="20"
+      cellspacing="10"
+      width="500"
+    >
+      <!-- 表格结构标签：<thead> <tbody> 目的是为了更好的表示表格的语义 -->
+      <thead>
+        <tr>
+          <!-- 两种单元格： -->
+          <!-- 1.表头单元格标签，其中的内容会居中并加粗显示 -->
+          <th>姓名</th>
+          <th>性别</th>
+          <th>电话</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- 2.普通单元格 -->
+          <td>刘小康</td>
+          <th class="orange">男</th>
+          <td>10086</td>
+        </tr>
+      </tbody>
     </table>
-
 
     <!-- 合并单元格 -->
     <!-- 1.先确定是跨行合并rowspan还是跨列合并colspan     -->
     <!-- 2.在目标单元格上添加rowspan="xxx" -->
     <!-- 3.删除多余的单元格 -->
     <table align="left" border="1" width="500" height="500" cellspacing="0">
-        <thead>
-            <tr>
-                <th>列1</th>
-                <th>列2</th>
-                <th>列3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td rowspan="2"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <!-- <td></td> -->
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <!-- <td></td> -->
-                <td></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>列1</th>
+          <th>列2</th>
+          <th>列3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td rowspan="2" class="orange"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <!-- <td></td> -->
+          <td></td>
+        </tr>
+      </tbody>
     </table>
-</body>
+  </body>
 </html>
