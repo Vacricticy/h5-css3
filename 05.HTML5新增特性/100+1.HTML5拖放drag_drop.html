@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box1 {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+      }
+      #box2 {
+        width: 50px;
+        height: 50px;
+        background-color: orangered;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="box1"
+      ondragover="dragover(event)"
+      ondragenter="dragenter()"
+      ondragleave="dragleave()"
+      ondrop="drop(event)"
+    ></div>
+    <!-- 步骤一：设置元素为可拖放 -->
+    <div
+      id="box2"
+      draggable="true"
+      ondragstart="dragstart(event)"
+      ondrag="drag(event)"
+    ></div>
+  </body>
+  <script>
+    //   步骤二：为欲拖动的元素添加ondragstart事件，用于规定元素被拖动时，会发生什么
+    function dragstart(ev) {
+      // dataTransfer.setData() 方法设置被拖数据的数据类型和值：
+      //   将被拖动元素的id保存起来
+      ev.dataTransfer.setData("Text", ev.target.id);
+      console.log("开始拖动该元素");
+    }
+    function drag() {
+      console.log("正在拖动该元素");
+    }
+
+    function dragenter() {
+      console.log("啊，你不要碰我啊");
+    }
+
+    function dragleave() {
+      console.log("哎呀妈呀，终于走了");
+    }
+
+    // 步骤3：为元素被拖动到的位置所在的元素绑定ondragover事件
+    function dragover(ev) {
+      console.log("啊啊啊，它在我内部移动");
+      // 默认地，无法将数据/元素放置到其他元素中。
+      ev.preventDefault();
+    }
+    // 步骤4：当放置被拖元素时，会触发drop事件
+    function drop(ev) {
+      console.log("好吧，来都来了");
+      // drop 事件的默认行为是以链接形式打开
+      ev.preventDefault();
+      //   获取之前保存的id，将其元素添加在目标元素中。
+      let data = ev.dataTransfer.getData("Text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+</html>
