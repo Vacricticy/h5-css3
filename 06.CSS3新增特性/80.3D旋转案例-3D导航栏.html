@@ -55,8 +55,10 @@
             如果没有严格按照要求为‘该父元素’添加该属性，则透视的效果会完全不同;
         */
         transform-origin: top;
-
         transform: translateZ(15px) rotateX(-90deg);
+
+        /* 要点2之方法二： */
+        /* transform: rotateX(-90deg) translateZ(-15px); */
       }
       .box:hover {
         /* 要点3：为父元素添加旋转效果，此时需要为该父元素添加transform-style:preserve-3d */
