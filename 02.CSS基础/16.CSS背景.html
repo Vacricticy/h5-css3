@@ -12,10 +12,17 @@
         width: 600px;
         height: 600px;
 
-        /* 1.background-color: transparent;默认情况背景颜色为透明状态 */
-        /* background-color: orange; */
-        /* 插曲：背景颜色半透明的设置----rgba中的a代表alpha透明度，取值为0表示透明，为1表示不透明 */
         background-color: rgba(0, 0, 0, 0.6);
+        /* 1.background-color: 
+          background-color: transparent;默认情况背景颜色为透明状态 
+          background-color: orange; 
+
+          插曲：背景颜色半透明的设置----rgba中的a代表alpha透明度，取值为0表示透明，为1表示不透明 
+          background-color: rgba(0, 0, 0, 0.6);
+
+          注意：背景颜色包含的范围包括了border
+
+        */
 
         /* 2.背景图片一般用于装饰性的小图片或超大的背景图片，便于调节位置，image标签不方便调节位置  */
         background-image: url(../images/liuyaren.png);
@@ -35,21 +42,59 @@
              x和y的顺序可以交换，原理是根据left,right或者top,bottom就可以知道是设置的x轴还是y轴，从而可以确定另一个参数所在的轴。
              结合下面一条规则，这样做的好处是只需要写一个参数就可确定背景图片的位置。
              若只写了一个参数，则另一参数默认为center
+             background-position: left center;❤表示背景定位的位置为最左边的中心位置，从这个位置开始对图片进行伸缩变化。
+
+            下面三种情况是等价的 
+               background-position: right center;
+               background-position: center right;  
+               background-position: right;
 
              （2）当是精确单位时，不可交换顺序:
              只写第一个参数，则第二个参数为居中显示            
+             backdround-position:20px 100px;❤表示背景定位的位置为距左边20px,距上边100px的位置，从这个位置开始对图片进行伸缩变化。
 
              （3）还可以是混合单位，即一个是方位，一个是单位，但此时必须保证x和y的顺序
+             background-position: 20px center;
          */
 
-        /* background-position: right top; */
-        /* 下面三种情况是等价的 */
-        /* background-position: right center; */
-        /* background-position: center right;  */
-        background-position: right;
+        /* 5.背景大小：
+          background-size（CSS3新）
+          注意：background-size，即图片的大小都是在background-position指定的定位位置的基础上来进行变化的
+        
+          (1)取值为px
 
-        /* background-position: 20px 100px; */
-        /* background-position: -20px; */
+          (2)取值为%，表示图片的大小占整个定位区域的百分比，注意：定位区域与盒子的大小不是一个概念。
+
+          (3)取值为cover,表示图片首先会保持原来的比例，然后缩放为完全覆盖“定位区域”的大小。
+
+          (4)取值为contain,表示图片首先会保持原来的比例，然后缩放成刚好不超过盒子的大小。
+
+          */
+
+        /* 注意：图片默认的background-position是左上角，默认的background-size是图片原始的大小 */
+
+        /* 6.background-origin(CSS3新) 
+          指定了背景图片的所在的边界范围，比如是否包含border,是否包含padding        
+
+          (1)取值为border-box 表示背景图的伸缩变化区域包括了border边界的范围
+          (1)取值为padding-box 表示背景图的伸缩变化区域包括了padding边界的范围
+          (1)取值为content-box 表示背景图的伸缩变化区域只在content区域内
+
+          注意：background-position是在background-origin的基础上进行定位指定的
+          注意：默认值为padding-box,即不包括border
+        
+         */
+
+        /* 注意：background-size最好单独指定，不要在background中指定，避免与background-position冲突，好像是本来就不能指定？？？？ */
+
+        /* 背景颜色与背景图片的冲突问题：
+        
+          先单独设置颜色，再通过background设置背景，这时背景色会被覆盖，原因是后面设置的background中也包含了color属性，且为透明色，所以前者会被覆盖掉。
+           background-color: orange;
+           background: url("./avatar1.jpg") no-repeat;
+        
+          注意：背景色在背景图片的下面一层，不可能实现背景色覆盖在背景图片的上面，除非将背景图片换成img标签
+         */
       }
 
       h3 {

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        height: 500px;
+        display: flex;
+        padding: 0 20px;
+      }
+      .box .column:nth-child(1) {
+        flex: 3;
+        background-color: pink;
+        margin-right: 20px;
+      }
+      .box .column:nth-child(2) {
+        flex: 6;
+        border: 10px solid rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        padding: 10px;
+
+        /* background-color: orange; */
+
+        background: url("../images//liuyaren.png") no-repeat;
+        /* background: url("../images/avatar1.jpg") no-repeat; */
+        /* background: url("./avatar1.jpg") no-repeat orange; */
+        /* background: url("./liuyaren.png") no-repeat; */
+
+        /* background-color: orange; */
+
+        /* background-position: 50% 100%; */
+        /* background-position: 20px 100px; */
+        /* background-position: right center; */
+        /* background-position: left top; */
+
+        /* background-size: 100px 50px; */
+        /* background-size: 80% 50%; */
+        /* background-size: 100% 100%; */
+        /* background-size: cover; */
+        /* background-size: contain; */
+
+        /* background-origin: border-box; */
+        /* background-origin: padding-box; */
+        /* background-origin: content-box; */
+      }
+      .box .column:nth-child(3) {
+        flex: 3;
+        background-color: pink;
+        border: 1px solid black;
+        margin-right: 20px;
+      }
+      ul {
+        display: flex;
+      }
+      li {
+        position: relative;
+        list-style: none;
+      }
+      li:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      li:hover a {
+        color: #fff;
+      }
+      /* li::after {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        display: block;
+        content: "";
+        width: 1px;
+        height: 50%;
+        background-color: black;
+      }*/
+      a {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        text-decoration: none;
+        color: black;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+    <ul>
+      <li><a href="#">苹果</a>|</li>
+      <li><a href="#">苹果香蕉</a>|</li>
+      <li><a href="#">苹果梨子</a>|</li>
+      <li><a href="#">苹果</a>|</li>
+      <li><a href="#">苹果</a>|</li>
+    </ul>
+  </body>
+</html>
