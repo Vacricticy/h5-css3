@@ -18,6 +18,19 @@
       }
     </style>
   </head>
+  <!--   **dragstart**:在开始拖放元素时触发。（事件源：被拖放元素）
+
+drag:正在拖放元素时触发。（事件源：被拖放元素）
+
+dragenter:在元素被拖进某元素时触发。（事件源：目标元素）
+
+**dragover**：在被拖放在某元素内移动时触发。（事件源：目标元素）
+
+dragleave：在被拖放元素移出目标元素时触发。（事件源：目标元素）
+
+**drop**：目标元素完全接受被拖放元素时触发。（事件源：目标元素）
+
+dragend:在整个拖放操作结束时触发。（事件源：被拖放元素） -->
   <body>
     <div
       id="box1"
@@ -32,6 +45,7 @@
       draggable="true"
       ondragstart="dragstart(event)"
       ondrag="drag(event)"
+      ondragend="end(event)"
     ></div>
   </body>
   <script>
@@ -68,6 +82,9 @@
       //   获取之前保存的id，将其元素添加在目标元素中。
       let data = ev.dataTransfer.getData("Text");
       ev.target.appendChild(document.getElementById(data));
+    }
+    function end(e) {
+      console.log("终于结束了");
     }
   </script>
 </html>
