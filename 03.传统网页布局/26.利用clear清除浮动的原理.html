@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 10px;
+        font-size: 14px;
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        float: left;
+      }
+      .sonn {
+        width: 100px;
+        height: 120px;
+        border: 1px solid black;
+        float: left;
+      }
+      .son2 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        float: right;
+      }
+      .son3 {
+        width: 50px;
+        height: 50px;
+        background-color: orange;
+        /* 添加clear属性可以清除该元素之前所有浮动元素对后面元素产生的影响 */
+        /* 表示该元素会紧贴在左浮动元素的下方 */
+        /* clear: left; */
+        /* 表示该元素会紧贴在右浮动元素的下方 */
+        /* clear: right; */
+        /* 表示该元素会紧贴在所有浮动元素的下方  */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+      <div class="sonn"></div>
+      <div class="son2"></div>
+      <div class="son3"></div>
+    </div>
+  </body>
+</html>
