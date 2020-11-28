@@ -11,6 +11,11 @@
             相比于直接设置宽高，使用scale的好处是缩放的时候不会影响其他元素的布局
 
             缩放也可以通过transform-origin设置缩放的中心点
+
+            - scale(-1)是缩小后重新复原
+            - scale(1,-1) 水平不变，做垂直翻转
+            - scale(-1,1)垂直方向不变，做水平翻转
+            - scale(-2)缩小后放大两倍
         */
 
       .box1 {
@@ -30,9 +35,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
+        /* transform: translate(-50%, -50%); */
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
         background-color: red;
 
@@ -41,10 +46,18 @@
       }
       .box1:hover .box2 {
         /* 关键点： */
-        transform: scale(50, 50);
+        /* transform: scale(50, 50); */
+        transform: scale(-1);
+        /* 竖直翻转 */
+        /* transform: scale(1, -1); */
+        /* 水平翻转 */
+        /* transform: scale(-1, 1); */
+        /* transform: scale(1); */
+        background-color: orange;
       }
       .box1:hover {
         background-color: yellow;
+        background-color: red;
       }
 
       .box3 {
